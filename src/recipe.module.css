@@ -1,0 +1,134 @@
+:root{
+    --main-color: lightcoral;
+    --white-color: rgb(255, 247, 247);
+    --shadow: rgb(70, 70, 70);
+}
+
+.recipe{
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px var(--shadow);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--white-color);
+    width: 500px;
+}
+
+.title{
+    color: var(--main-color);
+    font-family: 'Lobster', cursive;
+    font-size: 44px;
+    text-align: center;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+  
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transform-origin: 50% 50%;
+    transition: transform .25s, visibility .25s ease-in;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .4s ease;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.container:hover .image{
+    transform: scale(1.2);
+}
+
+.tags{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    left: 10%;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+    width: 90%;
+}
+
+.button_see_more{
+    background: lightcoral;
+    border: none;
+    padding: 10px 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: 0.2s linear;
+}
+
+.button_see_more:hover{
+    background: var(--white-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+/*.ingredients{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ingredients_text{
+    text-align: center;
+    color: var(--white-color);
+}*/
+
+@media screen and (max-width: 575.98px) {
+    .title{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767.98px){
+    .title{
+        font-size: 32px;
+    }
+
+    .info{
+        font-size: 12px;
+    }
+
+    .button_see_more{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 991.98px){
+    .title{
+        font-size: 40px;
+    }
+}
